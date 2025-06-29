@@ -1,90 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Success</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Staatliches&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      width: 100vw;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      color: black;
-      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      background-color: #ffffff;
+      font-family: 'Varela Round', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
     }
 
     .message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.6rem;
-      text-align: center;
-      font-weight: bold;
-      z-index: 1;
-      max-width: 90%;
-      line-height: 1.6;
+      max-width: 600px;
     }
 
-    #particles-js {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      z-index: 0;
+    .message h1 {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 2.5rem;
+      color: #333;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .message p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      .message h1 {
+        font-size: 1.8rem;
+      }
+
+      .message p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="message">
-    Thank you for your payment!<br>
-    You will receive your premium key shortly at the Gmail address linked to your PayPal account.
+  <div class="container">
+    <div class="message">
+      <h1>THANK YOU FOR YOUR PAYMENT!</h1>
+      <p>You will receive your premium key shortly at the Gmail address linked to your PayPal account.</p>
+    </div>
   </div>
-
-  <div id="particles-js"></div>
-
-  <!-- Particle.js Script -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#cccccc" },
-        "shape": { "type": "circle" },
-        "opacity": {
-          "value": 0.4,
-          "random": true
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "move": {
-          "enable": true,
-          "speed": 1,
-          "direction": "none",
-          "random": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" }
-        },
-        "modes": {
-          "repulse": { "distance": 80 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
 </body>
 </html>
